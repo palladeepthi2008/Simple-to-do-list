@@ -1,0 +1,88 @@
+
+
+# List to store tasks
+tasks = []
+
+
+# Function to add a task
+def add_task():
+    task = input("Enter task: ")
+    tasks.append(task)
+    print("Task added successfully!")
+
+
+# Function to view tasks
+def view_tasks():
+    if len(tasks) == 0:
+        print("No tasks available.")
+    else:
+        print("\nYour Tasks:")
+        
+        # Loop through the list and display tasks
+        for i in range(len(tasks)):
+            print(i + 1, ".", tasks[i])
+
+
+# Function to update a task
+def update_task():
+    view_tasks()
+
+    if len(tasks) > 0:
+        number = int(input("Enter task number to update: "))
+
+        if number >= 1 and number <= len(tasks):
+            new_task = input("Enter new task: ")
+            tasks[number - 1] = new_task
+            print("Task updated successfully!")
+        else:
+            print("Invalid task number.")
+
+
+# Function to remove a task
+def remove_task():
+    view_tasks()
+
+    if len(tasks) > 0:
+        number = int(input("Enter task number to remove: "))
+
+        if number >= 1 and number <= len(tasks):
+            tasks.pop(number - 1)
+            print("Task removed successfully!")
+        else:
+            print("Invalid task number.")
+
+
+# Main menu
+while True:
+
+    print("\n===== TO-DO LIST =====")
+    print("1. Add Task")
+    print("2. View Tasks")
+    print("3. Update Task")
+    print("4. Remove Task")
+    print("5. Exit")
+
+    # Get user's choice
+    choice = input("Enter your choice: ")
+
+
+    # Perform operation based on choice
+    if choice == "1":
+        add_task()
+
+    elif choice == "2":
+        view_tasks()
+
+    elif choice == "3":
+        update_task()
+
+    elif choice == "4":
+        remove_task()
+
+    elif choice == "5":
+        print("Thank you!")
+        break
+
+    else:
+        # Handle invalid menu choice
+        print("Invalid choice! Please enter 1 to 5.")
