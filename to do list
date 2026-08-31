@@ -1,0 +1,24 @@
+## 📝 Simple To-Do List – Python
+
+This project is a **command-line To-Do List application** developed using Python as part of my **Veda Technology Internship – Day 8 Task**.
+
+### 🚀 Features
+
+* Add new tasks
+* View all tasks
+* Update existing tasks
+* Remove tasks
+* Exit the application
+* Handles invalid menu choices
+
+### 🛠️ Concepts Used
+
+* Python Lists
+* Functions
+* Loops
+* Conditional statements
+* CRUD operations
+
+### 🎯 Objective
+
+The main objective of this project is to understand the basics of **lists, loops, conditions, functions, and menu-driven programs** in Python.
